@@ -1,0 +1,237 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section{
+    padding: 10px 50px;
+    width: 100%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #222;
+    border-radius: 50%;
+}
+.container h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: border-animation 2s infinite;
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+    transition: ease-out 2s;
+}
+.container h1:hover{
+    transform: scale(0.8);
+    transition: ease-in 2s;
+}
+.first-1{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.first-1 a{
+    text-decoration: none;
+    color: black;
+}
+.first-2{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.first-2 a{
+    text-decoration: none;
+    color: black;
+}
+ul {
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+    display: flex;
+    gap: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+.btn button {
+    --width: 100px;
+    --timing: 2s;
+    border: 0;
+    width: var(--width);
+    padding-block: 0.5em;
+    color: black;
+    font-weight: bold;
+    font-size: 1em;
+    background: transparent;
+    transition: all 0.2s;
+    border-radius: 10px;
+  }
+  
+.btn button:hover {
+    background-image: linear-gradient(to right, rgb(250, 82, 82), rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%, rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%, rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%, rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%, rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%, rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);
+    animation: var(--timing) linear dance infinite;
+    transform: scale(1.1) translateY(-1px);
+    color: white;
+  }
+  
+  @keyframes dance {
+    to {
+      background-position: var(--width);
+    }
+  }
+.first-1 ul a::after, .first-1 ul a::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    transition: 0.5s;
+  }
+  
+.first-1 ul a:hover::after, .first-1 ul a:hover::before {
+    width: 100%;
+  }
+li{
+    list-style: none;
+    display: flex;
+}
+
+.second{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 130px 0 40px 40px;
+}
+.second-1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.second-1 h1{
+    font-size: 4em;
+    font-weight: 500;
+    color: #222;
+    letter-spacing: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    /* transition: 0.5s; */
+    transition: ease-in-out 2s;
+}
+.second-1 h1:hover{
+    color: white;
+    text-shadow: 0 0 5px black,
+            0 0 25px black,
+            0 0 50px black,
+            0 0 100px black;
+            transition: ease-in-out 2s;
+            
+}
+.second-1 p{
+    font-weight: 500;
+    font-size: large;
+}
+.second-1 button {
+    height: 3em;
+    width: 8em;
+    border: none;
+    border-radius: 10em;
+    background: black;
+    font-size: 17px;
+    color: #ffffff;
+    font-family: inherit;
+    font-weight: 500;
+   }
+   
+.second-1 button:hover {
+    animation: shake3856 0.3s linear infinite both;
+   }
+   
+   @keyframes shake3856 {
+    0% {
+     -webkit-transform: translate(0);
+     transform: translate(0);
+    }
+   
+    20% {
+     -webkit-transform: translate(-2px, 2px);
+     transform: translate(-2px, 2px);
+    }
+   
+    40% {
+     -webkit-transform: translate(-2px, -2px);
+     transform: translate(-2px, -2px);
+    }
+   
+    60% {
+     -webkit-transform: translate(2px, 2px);
+     transform: translate(2px, 2px);
+    }
+   
+    80% {
+     -webkit-transform: translate(2px, -2px);
+     transform: translate(2px, -2px);
+    }
+   
+    100% {
+     -webkit-transform: translate(0);
+     transform: translate(0);
+    }
+   }
+   
+.second-2 img{
+    height: 60vh;
+    animation: mover ease-in-out 2s infinite;
+}
+/* .second-2 img:hover{
+    transform:;
+    transition: ease-in 3s;
+} */
+h1{
+    font-size: 50px;
+}
+.second-2 img{
+    /* -webkit-animation: mover 2s infinite  alternate; */
+    animation: mover ease-in-out 2s infinite;
+}
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+
+@media screen and (max-width:950px) {
+    .second{
+        flex-direction: column-reverse;
+        padding: 60px 0;
+        gap: 30px;
+    }
+    .first-1 ul{
+        display: none;
+    }
+    .first-2{
+        display: none;
+    }
+
+}
+  
+  
+  
+   
+   
+  
+  
+  
